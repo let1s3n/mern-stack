@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lalahmzo/public_html/
+    - /frontend -R build $DEPLOYPATH
+    - / -R backend $DEPLOYPATH
