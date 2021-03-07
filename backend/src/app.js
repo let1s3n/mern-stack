@@ -3,13 +3,12 @@ const cors = require('cors');
 const app = express();
 
 //Settings
-app.set('port', process.env.PORT
-  ? process.env.PORT
-  : 4000);
+app.set('port', process.env.PORT || 4000);
+app.set('json spaces', 2)
 
 //Middlewares
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); 
 
 //Routes
 app.use('/api/users',require('./routes/users') );
